@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный плеер</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="player-container">
+            <div class="now-playing">
+                <span class="now-playing-text">На паузе</span>
+                <div class="wave">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <div class="player-content">
+                <div class="album-cover">
+                    <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Обложка альбома">
+                </div>
+                
+                <div class="track-info">
+                    <h2>Летний дождь</h2>
+                    <p>Алексей Чумаков</p>
+                </div>
+                
+                <div class="time-controls">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill"></div>
+                        <div class="progress-bar-handle"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+                
+                <div class="player-controls">
+                    <button id="shuffle" class="control-btn">
+                        <i class="fas fa-random"></i>
+                    </button>
+                    <button id="prev" class="control-btn">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button id="play" class="control-btn play-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="next" class="control-btn">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button id="repeat" class="control-btn">
+                        <i class="fas fa-redo-alt"></i>
+                    </button>
+                </div>
+                
+                <div class="volume-controls">
+                    <button id="volume" class="control-btn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <div class="volume-slider">
+                        <div class="volume-slider-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="playlist-container">
+            <h3>Плейлист</h3>
+            <ul class="playlist-items">
+            </ul>
+            <div class="playlist-empty">
+                <p>Плейлист пуст</p>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="audio" preload="metadata"></audio>
+    
+    <script src="app.js"></script>
+</body>
+</html>
